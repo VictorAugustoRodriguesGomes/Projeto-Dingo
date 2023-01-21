@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <section class="efm1">
+        <div class="contentEfeitoMusic">
+            <div class="row" id="em1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="row" id="em2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="row" id="em3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="row" id="em4">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // efeito muisical 1
+
+        // base1
+        let tempo = 0;
+
+        var numeroRandomico1;
+        var ailio1;
+
+        const em1 = document.getElementById("em1");
+        const onda1 = em1.getElementsByTagName("span");
+
+        var onda1Anterior = 0;
+        var onda1Proimo = 0;
+
+        // base2
+        var numeroRandomico2;
+        var ailio2;
+
+        const em2 = document.getElementById("em2");
+        const onda2 = em2.getElementsByTagName("span");
+
+        var onda2Anterior = 0;
+        var onda2Proimo = 0;
+
+        // base3
+        var numeroRandomico3;
+        var ailio3;
+
+        const em3 = document.getElementById("em3");
+        const onda3 = em3.getElementsByTagName("span");
+
+        var onda3Anterior = 0;
+        var onda3Proimo = 0;
+
+        // base4
+        var numeroRandomico4;
+        var ailio4;
+
+        const em4 = document.getElementById("em4");
+        const onda4 = em4.getElementsByTagName("span");
+
+        var onda4Anterior = 0;
+        var onda4Proimo = 0;
+
+
+        setInterval(function run() {
+
+            if (tempo != 1) {
+
+            } else {
+
+                // parte 1
+                numeroRandomico1 = parseInt(Math.random() * (8 - 1) + 1);
+                onda1Proimo = numeroRandomico1;
+                if (onda1Anterior <= onda1Proimo) {
+                    ailio1 = 6;
+                    for (let index = 0; index < onda1Proimo; index++) {
+                        onda1[ailio1].classList.add("active");
+                        ailio1 = ailio1 - 1;
+                    }
+                    onda1Anterior = onda1Proimo;
+                } else {
+                    ailio1 = onda1Proimo;
+                    for (let index = 0; index < onda1Proimo; index++) {
+                        ailio1 = ailio1 + 1;
+                        onda1[index].classList.remove("active");
+                    }
+                    onda1Anterior = onda1Proimo;
+                }
+                if (onda1Anterior == onda1Proimo) {
+                    if (onda1Proimo % 2 == 0) {
+                        ailio1 = 6;
+                        for (let index = 0; index < (onda1Proimo + 1); index++) {
+                            onda1[ailio1].classList.add("active");
+                            ailio1 = ailio1 - 1;
+                        }
+                        onda1Anterior = onda1Proimo;
+                    } else {
+                        ailio1 = onda1Proimo - 1;
+                        for (let index = 0; index < onda1Proimo; index++) {
+                            ailio1 = ailio1 + 1;
+                            onda1[index].classList.remove("active");
+                        }
+                        onda1Anterior = onda1Proimo;
+                    }
+                }
+
+
+                // parte 2
+                numeroRandomico2 = parseInt(Math.random() * (8 - 1) + 1);
+                onda2Proimo = numeroRandomico2;
+                if (onda2Anterior <= onda2Proimo) {
+                    ailio2 = 6;
+                    for (let index = 0; index < onda2Proimo; index++) {
+                        onda2[ailio2].classList.add("active");
+                        ailio2 = ailio2 - 1;
+                    }
+                    onda2Anterior = onda2Proimo;
+                } else {
+                    ailio2 = onda2Proimo;
+                    for (let index = 0; index < onda2Proimo; index++) {
+                        ailio2 = ailio2 + 1;
+                        onda2[index].classList.remove("active");
+                    }
+                    onda2Anterior = onda2Proimo;
+                }
+                if (onda2Anterior == onda2Proimo) {
+                    if (onda2Proimo % 2 == 0) {
+                        ailio2 = 6;
+                        for (let index = 0; index < (onda2Proimo + 1); index++) {
+                            onda2[ailio2].classList.add("active");
+                            ailio2 = ailio2 - 1;
+                        }
+                        onda2Anterior = onda2Proimo;
+                    } else {
+                        ailio2 = onda2Proimo - 1;
+                        for (let index = 0; index < onda2Proimo; index++) {
+                            ailio2 = ailio2 + 1;
+                            onda2[index].classList.remove("active");
+                        }
+                        onda2Anterior = onda2Proimo;
+                    }
+                }
+
+                // parte3
+                numeroRandomico3 = parseInt(Math.random() * (8 - 1) + 1);
+                onda3Proimo = numeroRandomico3;
+                if (onda3Anterior <= onda3Proimo) {
+                    ailio3 = 6;
+                    for (let index = 0; index < onda3Proimo; index++) {
+                        onda3[ailio3].classList.add("active");
+                        ailio3 = ailio3 - 1;
+                    }
+                    onda3Anterior = onda3Proimo;
+                } else {
+                    ailio3 = onda3Proimo;
+                    for (let index = 0; index < onda3Proimo; index++) {
+                        ailio3 = ailio3 + 1;
+                        onda3[index].classList.remove("active");
+                    }
+                    onda3Anterior = onda3Proimo;
+                }
+                if (onda3Anterior == onda3Proimo) {
+                    if (onda3Proimo % 2 == 0) {
+                        ailio3 = 6;
+                        for (let index = 0; index < (onda3Proimo + 1); index++) {
+                            onda3[ailio3].classList.add("active");
+                            ailio3 = ailio3 - 1;
+                        }
+                        onda3Anterior = onda3Proimo;
+                    } else {
+                        ailio3 = onda3Proimo - 1;
+                        for (let index = 0; index < onda3Proimo; index++) {
+                            ailio3 = ailio3 + 1;
+                            onda3[index].classList.remove("active");
+                        }
+                        onda3Anterior = onda3Proimo;
+                    }
+                }
+
+                // parte 4
+                numeroRandomico4 = parseInt(Math.random() * (8 - 1) + 1);
+                onda4Proimo = numeroRandomico4;
+                if (onda4Anterior <= onda4Proimo) {
+                    ailio4 = 6;
+                    for (let index = 0; index < onda4Proimo; index++) {
+                        onda4[ailio4].classList.add("active");
+                        ailio4 = ailio4 - 1;
+                    }
+                    onda4Anterior = onda4Proimo;
+                } else {
+                    ailio4 = onda4Proimo;
+                    for (let index = 0; index < onda4Proimo; index++) {
+                        ailio4 = ailio4 + 1;
+                        onda4[index].classList.remove("active");
+                    }
+                    onda4Anterior = onda4Proimo;
+                }
+                if (onda4Anterior == onda4Proimo) {
+                    if (onda4Proimo % 2 == 0) {
+                        ailio4 = 6;
+                        for (let index = 0; index < (onda4Proimo + 1); index++) {
+                            onda4[ailio4].classList.add("active");
+                            ailio4 = ailio4 - 1;
+                        }
+                        onda4Anterior = onda4Proimo;
+                    } else {
+                        ailio4 = onda4Proimo - 1;
+                        for (let index = 0; index < onda4Proimo; index++) {
+                            ailio4 = ailio4 + 1;
+                            onda4[index].classList.remove("active");
+                        }
+                        onda4Anterior = onda4Proimo;
+                    }
+                }
+
+                onda1Anterior = onda1Proimo;
+                onda2Anterior = onda2Proimo;
+                onda3Anterior = onda3Proimo;
+                onda4Anterior = onda4Proimo;
+
+                tempo = 0;
+            }
+            tempo++;
+        }, 100);
+        // boa soter para entender esse codigo <3
+    </script>
+</body>
+
+</html>

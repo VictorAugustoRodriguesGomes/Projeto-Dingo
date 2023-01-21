@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Augusto</title>
+    <link rel="stylesheet" type="text/css" href="fundoVideo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index.css">
+</head>
+
+<body>
+    <section class="eeee">
+        <video src="../../vid/MENINO DANÇANDO NA BALADA PUMPED UP KICKS FUNK.mp4" autoplay="" muted="" loop=""> </video>
+        <section class="principal">
+
+            <div class="area">
+                <div class="row" id="Trinha1">
+
+                    <div class="col20" onclick="Trinha1X(0)">
+                        <div class="btnColor"> <span> q </span> </div>
+                    </div>
+
+                    <div class="col20" onclick="Trinha1X(2)">
+                        <div class="btnColor"> <span> w </span></div>
+                    </div>
+
+                    <div class="col20" onclick="Trinha1X(4)">
+                        <div class="btnColor"> <span> e </span></div>
+                    </div>
+
+                    <div class="col20" onclick="Trinha1X(6)">
+                        <div class="btnColor"> <span> r </span></div>
+                    </div>
+
+                    <div class="col20" onclick="Trinha1X(8)">
+                        <div class="btnColor"> <span> t </span></div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col20">
+                        <div class="btnColor"> <span> a </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"> <span> s </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"> <span> d </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"><span> f </span> </div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"> <span> g </span> </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col20">
+                        <div class="btnColor"><span> z </span> </div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"> <span> x </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"><span> c </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"><span> v </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"><span> b </span></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col20">
+                        <div class="btnColor"><span> h </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"><span> j </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"><span> k </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"><span> l </span></div>
+                    </div>
+
+                    <div class="col20">
+                        <div class="btnColor"><span> m </span></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="rowCal">
+
+                <div class="informe">
+
+                    <div class="volumeControl">
+                        <h1> Volume</h1>
+                        <div class="content">
+                            <ion-icon name="volume-mute-outline"></ion-icon>
+                            <div class=" campoVolume" id="campoVolume">
+                                <span onclick="ativar(0);" class="active"></span>
+                                <span onclick="ativar(1);" class="active"></span>
+                                <span onclick="ativar(2);" class="active"></span>
+                                <span onclick="ativar(3);" class="active"></span>
+                                <span onclick="ativar(4);"></span>
+                                <span onclick="ativar(5);"></span>
+                            </div>
+                            <ion-icon name="volume-high-outline"></ion-icon>
+                        </div>
+                    </div>
+
+
+                    <div class="velocidadeControl">
+                        <h1> Velocidade apena do onddd</h1>
+                        <div class="content">
+                            <ion-icon name="chevron-back-circle-outline" onclick="voltarVelocidade();"></ion-icon>
+                            <h2 id="textVelocidade">1X</h2>
+                            <ion-icon name="chevron-forward-circle-outline" onclick="avancaVelocidade();"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="efm1">
+                    <div class="contentEfeitoMusic">
+                        <div class="row" id="em1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="row" id="em2">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="row" id="em3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="row" id="em4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        var audio = new Audio('./msc/BOMB.wav');
+
+        // audio.load('./msc/BOMB.wav');
+    </script>
+
+
+    <script>
+        // efeito muisical 1
+
+        // base1
+        let tempo = 0;
+
+        var numeroRandomico1;
+        var ailio1;
+
+        const em1 = document.getElementById("em1");
+        const onda1 = em1.getElementsByTagName("span");
+
+        var onda1Anterior = 0;
+        var onda1Proimo = 0;
+
+        // base2
+        var numeroRandomico2;
+        var ailio2;
+
+        const em2 = document.getElementById("em2");
+        const onda2 = em2.getElementsByTagName("span");
+
+        var onda2Anterior = 0;
+        var onda2Proimo = 0;
+
+        // base3
+        var numeroRandomico3;
+        var ailio3;
+
+        const em3 = document.getElementById("em3");
+        const onda3 = em3.getElementsByTagName("span");
+
+        var onda3Anterior = 0;
+        var onda3Proimo = 0;
+
+        // base4
+        var numeroRandomico4;
+        var ailio4;
+
+        const em4 = document.getElementById("em4");
+        const onda4 = em4.getElementsByTagName("span");
+
+        var onda4Anterior = 0;
+        var onda4Proimo = 0;
+
+
+        setInterval(function run() {
+
+            if (tempo != 1) {
+
+            } else {
+
+                // parte 1
+                numeroRandomico1 = parseInt(Math.random() * (8 - 1) + 1);
+                onda1Proimo = numeroRandomico1;
+                if (onda1Anterior <= onda1Proimo) {
+                    ailio1 = 6;
+                    for (let index = 0; index < onda1Proimo; index++) {
+                        onda1[ailio1].classList.add("active");
+                        ailio1 = ailio1 - 1;
+                    }
+                    onda1Anterior = onda1Proimo;
+                } else {
+                    ailio1 = onda1Proimo;
+                    for (let index = 0; index < onda1Proimo; index++) {
+                        ailio1 = ailio1 + 1;
+                        onda1[index].classList.remove("active");
+                    }
+                    onda1Anterior = onda1Proimo;
+                }
+                if (onda1Anterior == onda1Proimo) {
+                    if (onda1Proimo % 2 == 0) {
+                        ailio1 = 6;
+                        for (let index = 0; index < (onda1Proimo + 1); index++) {
+                            onda1[ailio1].classList.add("active");
+                            ailio1 = ailio1 - 1;
+                        }
+                        onda1Anterior = onda1Proimo;
+                    } else {
+                        ailio1 = onda1Proimo - 1;
+                        for (let index = 0; index < onda1Proimo; index++) {
+                            ailio1 = ailio1 + 1;
+                            onda1[index].classList.remove("active");
+                        }
+                        onda1Anterior = onda1Proimo;
+                    }
+                }
+
+
+                // parte 2
+                numeroRandomico2 = parseInt(Math.random() * (8 - 1) + 1);
+                onda2Proimo = numeroRandomico2;
+                if (onda2Anterior <= onda2Proimo) {
+                    ailio2 = 6;
+                    for (let index = 0; index < onda2Proimo; index++) {
+                        onda2[ailio2].classList.add("active");
+                        ailio2 = ailio2 - 1;
+                    }
+                    onda2Anterior = onda2Proimo;
+                } else {
+                    ailio2 = onda2Proimo;
+                    for (let index = 0; index < onda2Proimo; index++) {
+                        ailio2 = ailio2 + 1;
+                        onda2[index].classList.remove("active");
+                    }
+                    onda2Anterior = onda2Proimo;
+                }
+                if (onda2Anterior == onda2Proimo) {
+                    if (onda2Proimo % 2 == 0) {
+                        ailio2 = 6;
+                        for (let index = 0; index < (onda2Proimo + 1); index++) {
+                            onda2[ailio2].classList.add("active");
+                            ailio2 = ailio2 - 1;
+                        }
+                        onda2Anterior = onda2Proimo;
+                    } else {
+                        ailio2 = onda2Proimo - 1;
+                        for (let index = 0; index < onda2Proimo; index++) {
+                            ailio2 = ailio2 + 1;
+                            onda2[index].classList.remove("active");
+                        }
+                        onda2Anterior = onda2Proimo;
+                    }
+                }
+
+                // parte3
+                numeroRandomico3 = parseInt(Math.random() * (8 - 1) + 1);
+                onda3Proimo = numeroRandomico3;
+                if (onda3Anterior <= onda3Proimo) {
+                    ailio3 = 6;
+                    for (let index = 0; index < onda3Proimo; index++) {
+                        onda3[ailio3].classList.add("active");
+                        ailio3 = ailio3 - 1;
+                    }
+                    onda3Anterior = onda3Proimo;
+                } else {
+                    ailio3 = onda3Proimo;
+                    for (let index = 0; index < onda3Proimo; index++) {
+                        ailio3 = ailio3 + 1;
+                        onda3[index].classList.remove("active");
+                    }
+                    onda3Anterior = onda3Proimo;
+                }
+                if (onda3Anterior == onda3Proimo) {
+                    if (onda3Proimo % 2 == 0) {
+                        ailio3 = 6;
+                        for (let index = 0; index < (onda3Proimo + 1); index++) {
+                            onda3[ailio3].classList.add("active");
+                            ailio3 = ailio3 - 1;
+                        }
+                        onda3Anterior = onda3Proimo;
+                    } else {
+                        ailio3 = onda3Proimo - 1;
+                        for (let index = 0; index < onda3Proimo; index++) {
+                            ailio3 = ailio3 + 1;
+                            onda3[index].classList.remove("active");
+                        }
+                        onda3Anterior = onda3Proimo;
+                    }
+                }
+
+                // parte 4
+                numeroRandomico4 = parseInt(Math.random() * (8 - 1) + 1);
+                onda4Proimo = numeroRandomico4;
+                if (onda4Anterior <= onda4Proimo) {
+                    ailio4 = 6;
+                    for (let index = 0; index < onda4Proimo; index++) {
+                        onda4[ailio4].classList.add("active");
+                        ailio4 = ailio4 - 1;
+                    }
+                    onda4Anterior = onda4Proimo;
+                } else {
+                    ailio4 = onda4Proimo;
+                    for (let index = 0; index < onda4Proimo; index++) {
+                        ailio4 = ailio4 + 1;
+                        onda4[index].classList.remove("active");
+                    }
+                    onda4Anterior = onda4Proimo;
+                }
+                if (onda4Anterior == onda4Proimo) {
+                    if (onda4Proimo % 2 == 0) {
+                        ailio4 = 6;
+                        for (let index = 0; index < (onda4Proimo + 1); index++) {
+                            onda4[ailio4].classList.add("active");
+                            ailio4 = ailio4 - 1;
+                        }
+                        onda4Anterior = onda4Proimo;
+                    } else {
+                        ailio4 = onda4Proimo - 1;
+                        for (let index = 0; index < onda4Proimo; index++) {
+                            ailio4 = ailio4 + 1;
+                            onda4[index].classList.remove("active");
+                        }
+                        onda4Anterior = onda4Proimo;
+                    }
+                }
+
+                onda1Anterior = onda1Proimo;
+                onda2Anterior = onda2Proimo;
+                onda3Anterior = onda3Proimo;
+                onda4Anterior = onda4Proimo;
+
+                tempo = 0;
+            }
+            tempo++;
+        }, 100);
+        // boa soter para entender esse codigo <3
+    </script>
+
+    <script>
+        // volume controlher
+
+        const campoVolume = document.getElementById("campoVolume");
+        const volume = campoVolume.getElementsByTagName("span");
+        var ultimoVolume = 3;
+        var axilioVolume;
+
+        function ativar(opp) {
+
+            if (opp > ultimoVolume) {
+                axilioVolume = opp - ultimoVolume;
+                for (let index = 0; index < axilioVolume; index++) {
+                    ultimoVolume = ultimoVolume + 1;
+                    volume[ultimoVolume].classList.add("active");
+                }
+            } else {
+                axilioVolume = ultimoVolume - opp;
+                for (let index = 0; index < axilioVolume; index++) {
+                    volume[ultimoVolume].classList.remove("active");
+                    ultimoVolume = ultimoVolume - 1;
+                }
+            }
+
+            console.log(opp)
+
+            if (opp == 0) {
+                this.audio.volume = 0;
+            }
+
+            if (opp == 1) {
+                this.audio.volume = 0.2;
+            }
+
+            if (opp == 2) {
+                this.audio.volume = 0.4;
+            }
+
+            if (opp == 3) {
+                this.audio.volume = 0.6;
+            }
+
+            if (opp == 4) {
+                this.audio.volume = 0.8
+            }
+
+            if (opp == 5) {
+                this.audio.volume = 1;
+            }
+
+        }
+    </script>
+
+    <script>
+        // velocidade control
+
+        const textVelocidade = document.getElementById("textVelocidade");
+        // const volume = campoVolume.getElementsByTagName("span");
+        // var ultimoVolume = 3;
+
+
+        function voltarVelocidade() {
+            if (textVelocidade.innerText == "1X") {
+                textVelocidade.textContent = "0.5X";
+            }
+            if (textVelocidade.innerText == "2X") {
+                textVelocidade.textContent = "1X";
+            }
+
+
+            if (textVelocidade.textContent == "0.5X") {
+                this.audio.playbackRate = 0.4;
+            }
+
+            if (textVelocidade.textContent == "1X") {
+                this.audio.playbackRate = 1;
+            }
+            if (textVelocidade.textContent == "2X") {
+                this.audio.playbackRate = 4;
+            }
+        }
+
+        function avancaVelocidade() {
+            if (textVelocidade.innerText == "1X") {
+                textVelocidade.textContent = "2X";
+            }
+
+            if (textVelocidade.innerText == "0.5X") {
+                textVelocidade.textContent = "1X";
+            }
+
+
+            if (textVelocidade.textContent == "0.5X") {
+                this.audio.playbackRate = 0.4;
+            }
+
+            if (textVelocidade.textContent == "1X") {
+                this.audio.playbackRate = 1;
+            }
+            if (textVelocidade.textContent == "2X") {
+                this.audio.playbackRate = 4;
+            }
+
+
+
+        }
+    </script>
+
+
+
+
+    <script>
+        // musica
+
+        const Trinha1 = document.getElementById("Trinha1");
+        const div1 = Trinha1.getElementsByTagName("div");
+
+        var qweAnterior = 0;
+
+
+        // div1[0].classList.toggle("active");
+
+
+        function Trinha1X(qwe) {
+
+            if (qwe == qweAnterior) {
+                div1[qweAnterior].classList.remove("active");
+                qweAnterior = 1;
+                audio.pause();
+                this.textVelocidade.textContent = "1X";
+            } else {
+                this.textVelocidade.textContent = "1X";
+                div1[qweAnterior].classList.remove("active");
+                div1[qwe].classList.toggle("active");
+                qweAnterior = qwe;
+                audio.load();
+                audio.play();
+                audio.loop = true;
+
+
+            }
+
+
+        }
+
+
+        document.body.addEventListener('keypress', function (event) {
+            const key = event.key;
+            const code = event.keyCode;
+            // console.log("Key:"+ key + ", Code " + code);
+            if (key == "q") {
+                Trinha1X(0);
+            }
+
+            if (key == "w") {
+                Trinha1X(2);
+            }
+
+            if (key == "e") {
+                Trinha1X(4);
+            }
+
+            if (key == "r") {
+                Trinha1X(6);
+            }
+
+            if (key == "t") {
+                Trinha1X(8);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

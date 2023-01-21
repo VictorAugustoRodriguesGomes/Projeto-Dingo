@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="range" min="1" max="200" value="100" id="velocidade" />
+
+
+  <script>
+    const input = document.querySelector('#velocidade');
+
+    input.addEventListener('change', function () {
+      const rate = parseInt(this.value, 10) / 100; // Dividir por 100 para ficar no range desejado
+      console.log(rate);
+    });
+  </script>
+</body>
+
+</html>
