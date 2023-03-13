@@ -1,18 +1,33 @@
-
-//  bae
 var audio = new Audio();
 
-// volume controlher
+let auxiliaryElectronic = 0;
+let auxiliaryElectronicPrevious = 0;
+const electronicAlbum = document.getElementById("electronicAlbum");
+const electronic = electronicAlbum.getElementsByClassName("col20");
+
+let auxiliaryFunk = 0;
+let auxiliaryFunkPrevious = 0;
+const funkAlbum = document.getElementById("funkAlbum");
+const funk = funkAlbum.getElementsByClassName("col20");
+
+let auxiliaryRap = 0;
+let auxiliaryRapPrevious = 0;
+const rapAlbum = document.getElementById("rapAlbum");
+const rap = rapAlbum.getElementsByClassName("col20");
+
+let auxiliaryTrap = 0;
+let auxiliaryTrapPrevious = 0;
+const trapAlbum = document.getElementById("trapAlbum");
+const trap = trapAlbum.getElementsByClassName("col20");
+
 let volumeAllowance;
 let previousVolume = 3;
 const fieldVolume = document.getElementById("fieldVolume");
 const volumeSpan = fieldVolume.getElementsByTagName("span");
 
-// velocidade control
 const speedText = document.getElementById("speedText");
 
 function volumeFunction(volumeValue) {
-
     if (volumeValue > previousVolume) {
         volumeAllowance = volumeValue - previousVolume;
         for (let index = 0; index < volumeAllowance; index++) {
@@ -94,239 +109,136 @@ function speedForwardFunction() {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// musica eletronica
-
-const electronicAlbum = document.getElementById("electronicAlbum");
-const div1 = electronicAlbum.getElementsByClassName("col20");
-
-var opt1Anterior = 0;
-var aopt1 = 0;
-
-// muica Funk
-
-const funkAlbum = document.getElementById("funkAlbum");
-const div2 = funkAlbum.getElementsByClassName("col20");
-
-var opt2Anterior = 0;
-var aopt2 = 0;
-
-
-// muica Rep
-
-const rapAlbum = document.getElementById("rapAlbum");
-const div3 = rapAlbum.getElementsByClassName("col20");
-
-var opt3Anterior = 0;
-var aopt3 = 0;
-
-
-// muica Trap
-
-const trapAlbum = document.getElementById("trapAlbum");
-const div4 = trapAlbum.getElementsByClassName("col20");
-
-var opt4Anterior = 0;
-var aopt4 = 0;
-
-
-// Trilha eletronica
-function electronicMusic(opt1) {
-    if (opt1 == opt1Anterior && aopt1 >= 1) {
-        div1[opt1Anterior].classList.remove("active");
-
+function electronicMusic(selectElectronicMusic) {
+    if (selectElectronicMusic == auxiliaryElectronicPrevious && auxiliaryElectronic >= 1) {
+        electronic[auxiliaryElectronicPrevious].classList.remove("active");
         audio.pause();
-
         this.speedText.textContent = "1X";
-        aopt1 = 0;
+        auxiliaryElectronic = 0;
 
     } else {
         this.speedText.textContent = "1X";
 
-        if (aopt2 >= 1) {
-            div2[opt2Anterior].classList.remove("active");
+        if (auxiliaryFunk >= 1) {
+            funk[auxiliaryFunkPrevious].classList.remove("active");
         }
 
-        if (aopt3 >= 1) {
-            div3[opt3Anterior].classList.remove("active");
+        if (auxiliaryRap >= 1) {
+            rap[auxiliaryRapPrevious].classList.remove("active");
         }
 
-        if (aopt4 >= 1) {
-            div4[opt4Anterior].classList.remove("active");
+        if (auxiliaryTrap >= 1) {
+            trap[auxiliaryTrapPrevious].classList.remove("active");
         }
 
-        div1[opt1Anterior].classList.remove("active");
-        div1[opt1].classList.toggle("active");
-
-        opt1Anterior = opt1;
-        aopt1 = 1;
-
+        electronic[auxiliaryElectronicPrevious].classList.remove("active");
+        electronic[selectElectronicMusic].classList.toggle("active");
+        auxiliaryElectronicPrevious = selectElectronicMusic;
+        auxiliaryElectronic = 1;
         audio.pause();
-        this.audio = new Audio('./msc/eletronica/E' + opt1 + '.mp3');
-
-        audio.load();
-        audio.play();
-        audio.loop = true;
-    }
-
-}
-
-
-// trila Funk
-function funkMusic(opt2) {
-    if (opt2 == opt2Anterior && aopt2 >= 1) {
-        div2[opt2Anterior].classList.remove("active");
-
-        audio.pause();
-
-        this.speedText.textContent = "1X";
-        aopt2 = 0;
-
-    } else {
-        this.speedText.textContent = "1X";
-
-
-        if (aopt1 >= 1) {
-            div1[opt1Anterior].classList.remove("active");
-        }
-
-        if (aopt3 >= 1) {
-            div3[opt3Anterior].classList.remove("active");
-        }
-
-        if (aopt4 >= 1) {
-            div4[opt4Anterior].classList.remove("active");
-        }
-
-        div2[opt2Anterior].classList.remove("active");
-        div2[opt2].classList.toggle("active");
-
-        opt2Anterior = opt2;
-        aopt2 = 1;
-
-        audio.pause();
-        this.audio = new Audio('./msc/funk/F' + opt2 + '.mp3');
-
+        this.audio = new Audio('../src/music/eletronica/E' + selectElectronicMusic + '.mp3');
         audio.load();
         audio.play();
         audio.loop = true;
     }
 }
 
-
-// trila Rep
-function rapMusic(opt3) {
-    if (opt3 == opt3Anterior && aopt3 >= 1) {
-        div3[opt3Anterior].classList.remove("active");
-
+function funkMusic(selectFunkMusic) {
+    if (selectFunkMusic == auxiliaryFunkPrevious && auxiliaryFunk >= 1) {
+        funk[auxiliaryFunkPrevious].classList.remove("active");
         audio.pause();
-
         this.speedText.textContent = "1X";
-        aopt3 = 0;
+        auxiliaryFunk = 0;
 
     } else {
         this.speedText.textContent = "1X";
 
-
-        if (aopt1 >= 1) {
-            div1[opt1Anterior].classList.remove("active");
+        if (auxiliaryElectronic >= 1) {
+            electronic[auxiliaryElectronicPrevious].classList.remove("active");
         }
 
-        if (aopt2 >= 1) {
-            div2[opt2Anterior].classList.remove("active");
+        if (auxiliaryRap >= 1) {
+            rap[auxiliaryRapPrevious].classList.remove("active");
         }
 
-        if (aopt4 >= 1) {
-            div4[opt4Anterior].classList.remove("active");
+        if (auxiliaryTrap >= 1) {
+            trap[auxiliaryTrapPrevious].classList.remove("active");
         }
 
-        div3[opt3Anterior].classList.remove("active");
-        div3[opt3].classList.toggle("active");
-
-        opt3Anterior = opt3;
-        aopt3 = 1;
-
+        funk[auxiliaryFunkPrevious].classList.remove("active");
+        funk[selectFunkMusic].classList.toggle("active");
+        auxiliaryFunkPrevious = selectFunkMusic;
+        auxiliaryFunk = 1;
         audio.pause();
-        this.audio = new Audio('./msc/rep/R' + opt3 + '.mp3');
-
+        this.audio = new Audio('../src/music/funk/F' + selectFunkMusic + '.mp3');
         audio.load();
         audio.play();
         audio.loop = true;
     }
 }
 
-// trila Rep
-function trapMusic(opt4) {
-    if (opt4 == opt4Anterior && aopt4 >= 1) {
-        div4[opt4Anterior].classList.remove("active");
-
+function rapMusic(selectRapMusic) {
+    if (selectRapMusic == auxiliaryRapPrevious && auxiliaryRap >= 1) {
+        rap[auxiliaryRapPrevious].classList.remove("active");
         audio.pause();
-
         this.speedText.textContent = "1X";
-        aopt4 = 0;
+        auxiliaryRap = 0;
 
     } else {
         this.speedText.textContent = "1X";
 
-
-        if (aopt1 >= 1) {
-            div1[opt1Anterior].classList.remove("active");
+        if (auxiliaryElectronic >= 1) {
+            electronic[auxiliaryElectronicPrevious].classList.remove("active");
         }
 
-        if (aopt2 >= 1) {
-            div2[opt2Anterior].classList.remove("active");
+        if (auxiliaryFunk >= 1) {
+            funk[auxiliaryFunkPrevious].classList.remove("active");
         }
 
-        if (aopt3 >= 1) {
-            div3[opt3Anterior].classList.remove("active");
+        if (auxiliaryTrap >= 1) {
+            trap[auxiliaryTrapPrevious].classList.remove("active");
         }
 
-        div4[opt4Anterior].classList.remove("active");
-        div4[opt4].classList.toggle("active");
-
-        opt4Anterior = opt4;
-        aopt4 = 1;
-
+        rap[auxiliaryRapPrevious].classList.remove("active");
+        rap[selectRapMusic].classList.toggle("active");
+        auxiliaryRapPrevious = selectRapMusic;
+        auxiliaryRap = 1;
         audio.pause();
-        this.audio = new Audio('./msc/trap/T' + opt4 + '.mp3');
+        this.audio = new Audio('../src/music/rep/R' + selectRapMusic + '.mp3');
+        audio.load();
+        audio.play();
+        audio.loop = true;
+    }
+}
 
+function trapMusic(selectTrapMusic) {
+    if (selectTrapMusic == auxiliaryTrapPrevious && auxiliaryTrap >= 1) {
+        trap[auxiliaryTrapPrevious].classList.remove("active");
+        audio.pause();
+        this.speedText.textContent = "1X";
+        auxiliaryTrap = 0;
+
+    } else {
+        this.speedText.textContent = "1X";
+
+        if (auxiliaryElectronic >= 1) {
+            electronic[auxiliaryElectronicPrevious].classList.remove("active");
+        }
+
+        if (auxiliaryFunk >= 1) {
+            funk[auxiliaryFunkPrevious].classList.remove("active");
+        }
+
+        if (auxiliaryRap >= 1) {
+            rap[auxiliaryRapPrevious].classList.remove("active");
+        }
+
+        trap[auxiliaryTrapPrevious].classList.remove("active");
+        trap[selectTrapMusic].classList.toggle("active");
+        auxiliaryTrapPrevious = selectTrapMusic;
+        auxiliaryTrap = 1;
+        audio.pause();
+        this.audio = new Audio('../src/music/trap/T' + selectTrapMusic + '.mp3');
         audio.load();
         audio.play();
         audio.loop = true;
@@ -336,7 +248,6 @@ function trapMusic(opt4) {
 document.body.addEventListener('keypress', function (event) {
     const key = event.key;
     const code = event.keyCode;
-    // console.log("Key:"+ key + ", Code " + code);
     if (key == "q") {
         electronicMusic(0);
     }
@@ -356,12 +267,6 @@ document.body.addEventListener('keypress', function (event) {
     if (key == "t") {
         electronicMusic(4);
     }
-
-
-
-
-
-
 
     if (key == "a") {
         funkMusic(0);
@@ -383,10 +288,6 @@ document.body.addEventListener('keypress', function (event) {
         funkMusic(4);
     }
 
-
-
-
-
     if (key == "z") {
         rapMusic(0);
     }
@@ -406,11 +307,6 @@ document.body.addEventListener('keypress', function (event) {
     if (key == "b") {
         rapMusic(4);
     }
-
-
-
-
-
 
     if (key == "h") {
         trapMusic(0);
