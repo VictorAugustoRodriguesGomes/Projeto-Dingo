@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://kit.fontawesome.com/59a2aef779.js" crossorigin="anonymous"></script> -->
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- https://files.comunidades.net/casilva01/COLORS_TABLE21042020.pdf -->
+
+    <section class="background" id="background">
+        <video src="src/vid/background.mp4" autoplay="" muted="" loop=""> </video>
+
+        <div class="container">
+            <div class="column60">
+                <div class="row" id="electronicAlbum">
+                    <div class="col20" onclick="electronicMusic(0)">
+                        <div class="buttonSound"> <span> q </span> </div>
+                    </div>
+
+                    <div class="col20" onclick="electronicMusic(1)">
+                        <div class="buttonSound"> <span> w </span> </div>
+                    </div>
+
+                    <div class="col20" onclick="electronicMusic(2)">
+                        <div class="buttonSound"> <span> e </span> </div>
+                    </div>
+
+                    <div class="col20" onclick="electronicMusic(3)">
+                        <div class="buttonSound"> <span> r </span> </div>
+                    </div>
+
+                    <div class="col20" onclick="electronicMusic(4)">
+                        <div class="buttonSound"> <span> t </span> </div>
+                    </div>
+                </div>
+
+                <div class="row" id="funkAlbum">
+                    <div class="col20" onclick="funkMusic(0);">
+                        <div class="buttonSound"> <span> a </span></div>
+                    </div>
+
+                    <div class="col20" onclick="funkMusic(1);">
+                        <div class="buttonSound"> <span> s </span></div>
+                    </div>
+
+                    <div class="col20" onclick="funkMusic(2);">
+                        <div class="buttonSound"> <span> d </span></div>
+                    </div>
+
+                    <div class="col20" onclick="funkMusic(3);">
+                        <div class="buttonSound"><span> f </span> </div>
+                    </div>
+
+                    <div class="col20" onclick="funkMusic(4);">
+                        <div class="buttonSound"> <span> g </span> </div>
+                    </div>
+                </div>
+
+                <div class="row" id="rapAlbum">
+                    <div class="col20" onclick="rapMusic(0);">
+                        <div class="buttonSound"><span> z </span> </div>
+                    </div>
+
+                    <div class="col20" onclick="rapMusic(1);">
+                        <div class="buttonSound"> <span> x </span></div>
+                    </div>
+
+                    <div class="col20" onclick="rapMusic(2);">
+                        <div class="buttonSound"><span> c </span></div>
+                    </div>
+
+                    <div class="col20" onclick="rapMusic(3);">
+                        <div class="buttonSound"><span> v </span></div>
+                    </div>
+
+                    <div class="col20" onclick="rapMusic(4);">
+                        <div class="buttonSound"><span> b </span></div>
+                    </div>
+                </div>
+
+                <div class="row" id="trapAlbum">
+                    <div class="col20" onclick="trapMusic(0);">
+                        <div class="buttonSound"><span> h </span></div>
+                    </div>
+
+                    <div class="col20" onclick="trapMusic(1);">
+                        <div class="buttonSound"><span> j </span></div>
+                    </div>
+
+                    <div class="col20" onclick="trapMusic(2);">
+                        <div class="buttonSound"><span> k </span></div>
+                    </div>
+
+                    <div class="col20" onclick="trapMusic(3);">
+                        <div class="buttonSound"><span> l </span></div>
+                    </div>
+
+                    <div class="col20" onclick="trapMusic(4);">
+                        <div class="buttonSound"><span> m </span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column40">
+                <div class="musicControl">
+                    <div class="volumeControl">
+                        <h1> Volume </h1>
+                        <div class="content">
+                            <ion-icon name="volume-mute-outline"></ion-icon>
+                            <div class="fieldVolume" id="fieldVolume">
+                                <span onclick="volumeFunction(0);" class="active"></span>
+                                <span onclick="volumeFunction(1);" class="active"></span>
+                                <span onclick="volumeFunction(2);" class="active"></span>
+                                <span onclick="volumeFunction(3);" class="active"></span>
+                                <span onclick="volumeFunction(4);"></span>
+                                <span onclick="volumeFunction(5);"></span>
+                            </div>
+                            <ion-icon name="volume-high-outline"></ion-icon>
+                        </div>
+                    </div>
+
+
+                    <div class="speedControl">
+                        <h1> Velocidade </h1>
+                        <div class="content">
+                            <ion-icon name="chevron-back-circle-outline" onclick="speedBackFunction();"></ion-icon>
+                            <h2 id="speedText">1X</h2>
+                            <ion-icon name="chevron-forward-circle-outline" onclick="speedForwardFunction();">
+                            </ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="musicEffect">
+                    <div class="content">
+                        <div class="row" id="rowMusicEffect1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="row" id="rowMusicEffect2">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="row" id="rowMusicEffect3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="row" id="rowMusicEffect4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <script type="text/javascript" src="src/js/musicEffect.js"></script>
+
+</body>
+
+</html>
